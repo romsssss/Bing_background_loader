@@ -2,7 +2,7 @@
 # Description :
 #       Shell script updating GNOME background with Bing picture of the day.
 # Author : Romain Vigo Benia
-# Last update: December - 2012
+# Last update: June - 2013
 # --------------------------------------------------------------------------------
 
 
@@ -13,12 +13,12 @@
 # Where the background images will be saved
 BACKGROUND_DIRECTORY=$HOME'/Pictures/Bing_backgrounds/'
 
-# Which Google bing to use
+# Which version of bing to use
 # possible values : en-US, zh-CN, ja-JP, en-AU, en-UK, de-DE, en-NZ, en-CA, fr-FR, it-IT, ...
 BING_COUNTRY='fr-FR'
 
 # Background resolution
-# Possible values : "1024x768" "1280x720" "1366x768" "1920x1200"
+# Possible values : "1024x768" "1280x720" "1366x768" ("1920x1200")
 RESOLUTION="1366x768"
 
 
@@ -39,7 +39,7 @@ check_dependencies(){
 	fi
 }
 
-# Get the url of the background image from bing archives
+# Get the url of today's background image from bing archives
 get_background_url(){
 	# Bing url
 	bing_url='http://www.bing.com'
@@ -82,7 +82,7 @@ set_background(){
 ###        SCRIPT CORE         ###
 ##################################
 
-## 1. We check if the dependencies are present
+## 1. Check if the dependencies are present
 check_dependencies
 
 ## 2. Creation of background directory if it does not already exist
